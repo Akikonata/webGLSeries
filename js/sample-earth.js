@@ -23,7 +23,7 @@
 	scene.add(light);
 
 	var earth = new THREE.Mesh(geometry, material);
-	earth.position.z = -20;
+	earth.position.z = -25;
 	scene.add(earth);
 
 	camera.position.y = 0;
