@@ -8,23 +8,20 @@
 	var renderer = new THREE.WebGLRenderer();
 	renderer.setSize(width, height);
 	document.body.appendChild(renderer.domElement);
-	//创建指针
-	var dir = new THREE.Vector3(1, 0, 0);
-	var origin = new THREE.Vector3(0, 0, 0);
-	var length = 10;
-	var hex = 0xffffff;
-
-	var arrowHelper = new THREE.ArrowHelper(dir, origin, length, hex);
-	arrowHelper.rotation.x = 1;
-	scene.add(arrowHelper);
 	//创建表盘
+	var geometry = new THREE.CylinderGeometry(10, 10, 0.5, 32);
+	var material = new THREE.MeshBasicMaterial({
+		color: 0xffffff
+	});
+	var cylinder = new THREE.Mesh(geometry, material);
+	scene.add(cylinder);
+	//创建秒针
 
 	//设置相机的位置
-	camera.position.y = 0;
-	camera.position.z = 10;
+	camera.position.y = 5;
+	camera.position.z = 20;
 
 	function animate() {
-		arrowHelper.rotation.y += Math.PI / 30;
 		renderer.render(scene, camera);
 		setTimeout(animate, 1000);
 	}
