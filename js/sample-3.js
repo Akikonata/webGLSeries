@@ -24,7 +24,12 @@
 	ring.rotation.x = -Math.PI / 2;
 	scene.add(ring);
 	//创建秒针
-	var secondHandGeometry = new THREE.BoxGeometry();
+	var secondHandGeometry = new THREE.BoxGeometry(9, 1.5, 1);
+	var secondHandMaterial = new THREE.MeshBasicMaterial({
+		color: 0x000000
+	});
+	var secondHand = new THREE.Mesh(secondHandGeometry, secondHandMaterial);
+	scene.add(secondHand);
 	//设置相机的位置
 	camera.position.y = 5;
 	camera.position.z = 20;
