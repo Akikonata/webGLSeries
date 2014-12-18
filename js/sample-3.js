@@ -40,7 +40,7 @@
 	//创建秒针
 	var secondHandGeometry = new THREE.BoxGeometry(9, 0.5, 0.5);
 	var secondHandMaterial = new THREE.MeshPhongMaterial({
-		color: 0xe60012
+		color: 0xe5004f
 	});
 	var secondHand = new THREE.Mesh(secondHandGeometry, secondHandMaterial);
 	secondHand.castShadow = true;
