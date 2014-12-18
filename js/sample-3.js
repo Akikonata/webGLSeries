@@ -9,14 +9,22 @@
 	renderer.setSize(width, height);
 	document.body.appendChild(renderer.domElement);
 	//创建表盘
-	var geometry = new THREE.CylinderGeometry(10, 10, 0.5, 32);
-	var material = new THREE.MeshBasicMaterial({
+	var cylinderGeometry = new THREE.CylinderGeometry(10, 10, 0.5, 32);
+	var cylindermMaterial = new THREE.MeshBasicMaterial({
 		color: 0xffffff
 	});
-	var cylinder = new THREE.Mesh(geometry, material);
+	var cylinder = new THREE.Mesh(cylinderGeometry, cylindermMaterial);
 	scene.add(cylinder);
+	var ringGeometry = new THREE.RingGeometry(10, 11, 32);
+	var ringMaterial = new THREE.MeshBasicMaterial({
+		color: 0xffff00,
+		side: THREE.DoubleSide
+	});
+	var ring = new THREE.Mesh(ringGeometry, ringMaterial);
+	ring.rotation.x = -Math.PI / 2;
+	scene.add(ring);
 	//创建秒针
-
+	var secondHandGeometry = new THREE.BoxGeometry();
 	//设置相机的位置
 	camera.position.y = 5;
 	camera.position.z = 20;
