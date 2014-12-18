@@ -3,6 +3,9 @@
 	var scene = new THREE.Scene();
 	var width = document.body.clientWidth;
 	var height = document.body.clientHeight;
+	var texture = THREE.ImageUtils.loadTexture("heart.jpg");
+	texture.wrapS = THREE.MirroredRepeatWrapping;
+	texture.wrapT = THREE.MirroredRepeatWrapping;
 	//加入漫反射和聚光灯
 	// var amLight = new THREE.AmbientLight(0x563abb);
 	// scene.add(amLight);
@@ -24,7 +27,8 @@
 	//创建表盘
 	var cylinderGeometry = new THREE.CylinderGeometry(10, 10, 0.5, 32);
 	var cylindermMaterial = new THREE.MeshPhongMaterial({
-		color: 0xffffff
+		color: 0xffffff,
+		map: texture
 	});
 	var cylinder = new THREE.Mesh(cylinderGeometry, cylindermMaterial);
 	scene.add(cylinder);
