@@ -38,15 +38,35 @@
 	torus.rotation.x = -Math.PI / 2;
 	scene.add(torus);
 	//创建秒针
-	var secondHandGeometry = new THREE.BoxGeometry(9.5, 0.5, 0.5);
+	var secondHandGeometry = new THREE.BoxGeometry(9, 0.5, 0.5);
 	var secondHandMaterial = new THREE.MeshPhongMaterial({
-		color: 0x000000
+		color: 0xe60012
 	});
 	var secondHand = new THREE.Mesh(secondHandGeometry, secondHandMaterial);
 	secondHand.castShadow = true;
 	secondHand.receiveShadow = true;
 	secondHand.position.y = 0.8;
 	scene.add(secondHand);
+	//创建分针
+	var minuteHandGeometry = new THREE.BoxGeometry(6, 0.3, 0.5);
+	var minuteHandMaterial = new THREE.MeshPhongMaterial({
+		color: 0x000000
+	});
+	var minuteHand = new THREE.Mesh(minuteHandGeometry, minuteHandMaterial);
+	minuteHand.castShadow = true;
+	minuteHand.receiveShadow = true;
+	minuteHand.position.y = 0.8;
+	scene.add(minuteHand);
+	//创建时针
+	var hourHandGeometry = new THREE.BoxGeometry(4, 0.3, 0.5);
+	var hourHandMaterial = new THREE.MeshPhongMaterial({
+		color: 0x000000
+	});
+	var hourHand = new THREE.Mesh(hourHandGeometry, hourHandMaterial);
+	hourHand.castShadow = true;
+	hourHand.receiveShadow = true;
+	hourHand.position.y = 0.8;
+	scene.add(hourHand);
 	//创建刻度
 	var carveGeometry = new THREE.BoxGeometry(1, 1, 1);
 	var carveMaterial = new THREE.MeshPhongMaterial({
@@ -92,9 +112,16 @@
 	//camera.position.x = 10;
 
 	function animate() {
-		secondHand.rotation.y -= Math.PI / 30;
+		var d = new Date();
+		secondHand.rotation.y = Math.PI / 2 - Math.PI * d.getSeconds() / 30;
 		secondHand.position.x = 4.5 * Math.cos(secondHand.rotation.y);
 		secondHand.position.z = -4.5 * Math.sin(secondHand.rotation.y);
+		minuteHand.rotation.y = Math.PI / 2 - Math.PI * d.getMinutes() / 30;
+		minuteHand.position.x = 3 * Math.cos(minuteHand.rotation.y);
+		minuteHand.position.z = -3 * Math.sin(minuteHand.rotation.y);
+		hourHand.rotation.y = Math.PI / 2 - Math.PI * d.getHours() / 6 - d.getMinutes() * Math.PI / 360;
+		hourHand.position.x = 2 * Math.cos(hourHand.rotation.y);
+		hourHand.position.z = -2 * Math.sin(hourHand.rotation.y);
 		renderer.render(scene, camera);
 		setTimeout(animate, 1000);
 	}
