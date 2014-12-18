@@ -23,15 +23,15 @@
 	document.body.appendChild(renderer.domElement);
 	//创建表盘
 	var cylinderGeometry = new THREE.CylinderGeometry(10, 10, 0.5, 32);
-	var cylindermMaterial = new THREE.MeshLambertMaterial({
+	var cylindermMaterial = new THREE.MeshPhongMaterial({
 		color: 0xffffff
 	});
 	var cylinder = new THREE.Mesh(cylinderGeometry, cylindermMaterial);
 	scene.add(cylinder);
 	cylinder.castShadow = true;
 	cylinder.receiveShadow = true;
-	var torusGeometry = new THREE.TorusGeometry(11, 1, 16, 100);
-	var torusMaterial = new THREE.MeshPhongMaterial({
+	var torusGeometry = new THREE.TorusGeometry(11.5, 1.5, 16, 100);
+	var torusMaterial = new THREE.MeshLambertMaterial({
 		color: 0x8f82bc
 	});
 	var torus = new THREE.Mesh(torusGeometry, torusMaterial);
@@ -59,6 +59,23 @@
 		carve.position.z = -9 * Math.sin(carve.rotation.y);
 		scene.add(carve);
 	}
+	// var textGeometry = new THREE.TextGeometry('1', {
+	// 	size: 20,
+	// 	height: 10,
+	// 	curveSegments: 32,
+	// 	font: 'Helvetica',
+	// 	weight: 'normal',
+	// 	style: 'normal',
+	// 	bevelEnabled: true,
+	// 	bevelThickness: 10,
+	// 	bevelSize: 8
+
+	// });
+	// var textMaterial = new THREE.MeshPhongMaterial({
+	// 	color: 0x000000
+	// });
+	// var text = new THREE.Mesh(textGeometry, textMaterial);
+	// scene.add(text);
 	//创建中心的圆柱
 	var centerGeometry = new THREE.CylinderGeometry(1, 1, 2.5, 32);
 	var centerMaterial = new THREE.MeshPhongMaterial({
@@ -69,8 +86,9 @@
 	center.castShadow = true;
 	center.receiveShadow = true;
 	//设置相机的位置
-	camera.position.y = 10;
-	camera.position.z = 25;
+	camera.position.y = 20;
+	camera.position.z = 20;
+	camera.rotation.x = -Math.PI / 6;
 	//camera.position.x = 10;
 
 	function animate() {
