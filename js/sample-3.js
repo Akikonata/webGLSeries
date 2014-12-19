@@ -7,7 +7,7 @@
 	texture.wrapS = THREE.MirroredRepeatWrapping;
 	texture.wrapT = THREE.MirroredRepeatWrapping;
 	//加入漫反射和聚光灯
-	// var amLight = new THREE.AmbientLight(0x563abb);
+	// var amLight = new THREE.AmbientLight(0xff0000);
 	// scene.add(amLight);
 	var light = new THREE.SpotLight(0xffffff, 1);
 	light.position.set(100, 200, 50);
@@ -27,14 +27,14 @@
 	//创建表盘
 	var cylinderGeometry = new THREE.CylinderGeometry(10, 10, 0.5, 32);
 	var cylindermMaterial = new THREE.MeshPhongMaterial({
-		color: 0xffffff,
-		// map: texture
+		color: 0xffffff
+			// map: texture
 	});
 	var cylinder = new THREE.Mesh(cylinderGeometry, cylindermMaterial);
 	scene.add(cylinder);
-	cylinder.castShadow = true;
+	// cylinder.castShadow = true;
 	cylinder.receiveShadow = true;
-	var torusGeometry = new THREE.TorusGeometry(11.5, 1.5, 16, 100);
+	var torusGeometry = new THREE.TorusGeometry(11.5, 1.6, 16, 100);
 	var torusMaterial = new THREE.MeshLambertMaterial({
 		color: 0x8f82bc
 	});
@@ -48,7 +48,7 @@
 	});
 	var secondHand = new THREE.Mesh(secondHandGeometry, secondHandMaterial);
 	secondHand.castShadow = true;
-	secondHand.receiveShadow = true;
+	// secondHand.receiveShadow = true;
 	secondHand.position.y = 0.8;
 	scene.add(secondHand);
 	//创建分针

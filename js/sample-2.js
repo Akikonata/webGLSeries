@@ -10,31 +10,30 @@
 	//视锥角度、视野纵横比、近平面，远平面
 	var camera = new THREE.PerspectiveCamera(90, 1, 0.1, 1000);
 	var renderer = new THREE.WebGLRenderer();
-	renderer.shadowMapEnabled = true;
 	renderer.setSize(600, 600);
 	//renderer.setClearColorHex(0xffffff, 1);
 	document.getElementById('stage').appendChild(renderer.domElement);
-	renderer.shadowMapEnabled = true;
 	//往场景里添加物体
 	// var geometry = new THREE.BoxGeometry(10, 10, 10);
 	var geometry = new THREE.SphereGeometry(10, 32, 32);
+	//加载纹理
 	var texture = THREE.ImageUtils.loadTexture("texture.png");
-	// var material = new THREE.MeshBasicMaterial({
-	// 	color: 0x00ff00,
+	// var material = new THREE.LineBasicMaterial({
+	// 	color: 0xffffff,
 	// 	map: texture
 	// });
-	var material = new THREE.MeshPhongMaterial({
-		color: 0xFFFFFF,
-		map: texture
-	});
-	// var material = new THREE.MeshLambertMaterial({
+	// var material = new THREE.MeshBasicMaterial({
+	// 	color: 0xffffff,
+	// 	map: texture
+	// });
+	// var material = new THREE.MeshPhongMaterial({
 	// 	color: 0xFFFFFF,
 	// 	map: texture
 	// });
-	// var material = new THREE.LineBasicMaterial({
-	// 	color: 0xffff00,
-	// 	linewidth: 1
-	// });
+	var material = new THREE.MeshLambertMaterial({
+		color: 0xFFFFFF,
+		map: texture
+	});
 	var pointLight = new THREE.PointLight(0xFFFFFF); // Set the color of the light source (white).
 	pointLight.position.set(0, 0, 0); // Position the light source at (x, y, z).
 	scene.add(pointLight); // Add the light sou6rce to the scene.
