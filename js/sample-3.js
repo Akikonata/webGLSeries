@@ -28,7 +28,7 @@
 	var cylinderGeometry = new THREE.CylinderGeometry(10, 10, 0.5, 32);
 	var cylindermMaterial = new THREE.MeshPhongMaterial({
 		color: 0xffffff,
-		map: texture
+		// map: texture
 	});
 	var cylinder = new THREE.Mesh(cylinderGeometry, cylindermMaterial);
 	scene.add(cylinder);
