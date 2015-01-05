@@ -8,10 +8,13 @@
 	var renderer = new THREE.WebGLRenderer();
 	renderer.setSize(width, height);
 	document.body.appendChild(renderer.domElement);
+	renderer.domElement.id = 'earth-canvas';
 	//往场景里添加物体
 	var geometry = new THREE.SphereGeometry(10, 32, 32);
-	var texture = THREE.ImageUtils.loadTexture("texture.png");
-	var material = new THREE.MeshPhongMaterial({
+	var texture = THREE.ImageUtils.loadTexture("earth.jpg", function(tex) {
+		console.log(tex);
+	});
+	var material = new THREE.MeshLambertMaterial({
 		color: 0xFFFFFF,
 		map: texture
 	});
@@ -29,16 +32,27 @@
 	camera.position.y = 0;
 	camera.position.z = 0;
 	var Radius = 0;
+	var state = 'rotating';
 
 	function animate() {
 		earth.rotation.y += 0.01;
 		renderer.render(scene, camera);
-		requestAnimationFrame(animate);
+		if (state === 'rotating') requestAnimationFrame(animate);
 	}
 	animate();
 	window.onresize = function() {
 		width = document.body.clientWidth;
 		height = document.body.clientHeight;
 		renderer.setSize(width, height);
+		renderer.render(scene, camera);
 	};
+	var earthCanvas = document.getElementById('earth-canvas');
+	console.log(earthCanvas);
+	window.addEventListener('touchstart', function() {
+		if (state === 'rotating') state = 'stop';
+		else {
+			state = 'rotating';
+			animate();
+		}
+	});
 })();

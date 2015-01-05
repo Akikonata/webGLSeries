@@ -5,6 +5,10 @@
 	<title>three-test</title>
 	<style>
 		canvas { width: 100%; height: 100% }
+		*{
+			margin:0;
+			padding: 0;
+		}
 	</style>
 </head>
 <body>
@@ -33,13 +37,13 @@
 	    scene.add(camera);
 
 		var loader =  new  THREE.ColladaLoader ();
-		loader.load ('test.dae',function ( result )  {
+		loader.load ('uvTest.dae',function ( result )  {
 			var cube = result.scene;
 			console.log(cube);
   			scene.add(cube);
   			var rotate3d = function(){
   				renderer.render(scene,camera);
-  				cube.position.y+=0.01;
+  				cube.rotation.y+=0.01;
   				requestAnimationFrame(rotate3d);
   			}
   			rotate3d();
