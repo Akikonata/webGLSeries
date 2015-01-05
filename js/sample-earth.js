@@ -7,6 +7,7 @@
 	var camera = new THREE.PerspectiveCamera(90, width / height, 0.1, 1000);
 	var renderer = new THREE.WebGLRenderer();
 	renderer.setSize(width, height);
+	renderer.setClearColor(0x000000, 1);
 	document.body.appendChild(renderer.domElement);
 	renderer.domElement.id = 'earth-canvas';
 	//往场景里添加物体
