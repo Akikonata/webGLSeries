@@ -1,4 +1,8 @@
 (function() {
+	if (!window.WebGLActiveInfo) {
+		alert("您的浏览器不支持webGL");
+		return;
+	}
 	//初始化场景
 	var scene = new THREE.Scene();
 	var width = document.body.clientWidth;
@@ -34,7 +38,7 @@
 	var select = '';
 
 	function animate() {
-		//earth.rotation.y += 0.001;
+		earth.rotation.y += 0.01;
 		renderer.render(scene, camera);
 		switch (select) {
 			case "hot":

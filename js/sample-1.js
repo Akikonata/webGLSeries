@@ -2,14 +2,14 @@
 	//初始化场景
 	var scene = new THREE.Scene();
 	//视锥角度、视野纵横比、近平面，远平面
-	var camera = new THREE.PerspectiveCamera(90, 1, 0.1, 1000);
+	var camera = new THREE.PerspectiveCamera(90, 1, 10, 1000);
 	var renderer = new THREE.WebGLRenderer();
 	renderer.setSize(600, 600);
 	document.getElementById('stage').appendChild(renderer.domElement);
 	//往场景里添加物体
 	// var geometry = new THREE.BoxGeometry(10, 10, 10);
 	var geometry = new THREE.SphereGeometry(5, 32, 32);
-	var texture = THREE.ImageUtils.loadTexture("texture.jpg");
+	var texture = THREE.ImageUtils.loadTexture("heart.jpg");
 	var material = new THREE.MeshBasicMaterial({
 		color: 0x00ff00,
 		map: texture
