@@ -8,6 +8,7 @@
 		*{
 			margin: 0;
 			padding: 0;
+			user-select: none;
 		}
 		body,html{
 			width: 100%;
@@ -18,6 +19,21 @@
 		canvas{
 			position: absolute;
 			z-index: 1
+		}
+		footer{
+			position: fixed;
+			color: #d6c4a8;
+			z-index: 3;
+			bottom: 0;
+			padding: 2%;
+			width: 96%;
+		}
+		footer .arrow{
+			display: inline-block;
+			font-size: 20px;
+		}
+		footer .arrow:nth-child(2){
+			float: right;
 		}
 		.panel{
 			position: absolute;
@@ -34,12 +50,38 @@
 			border-radius: 10px;
 			padding: 20px;
 		}
+		.controller{
+			position: fixed;
+			bottom: 30px;
+			width: 100%;
+			z-index: 3;
+			text-align: center;
+		}
+		.controller>a{
+			display: inline-block;
+			text-decoration: none;
+			padding: 10px;
+			margin: 0 10px;
+			font-size: 12px;
+			border-radius: 5px;
+			background: #d6c4a8
+		}
+		.controller>a:active{
+			background: white
+		}
 	</style>
 </head>
 <body>
-	<div class="panel">
+	<div class="controller" id="controller-bar">
+		<a data-cmd='hot'>十大热门目的地</a>
+	</div>
+	<div class="panel" id="panel">
 		<h1>2014年春节境外旅游数据统计报告</h1>
 	</div>
+	<footer>
+		<div class="arrow" data-dir="left"><</div>
+		<div class="arrow" data-dir="right">></div>
+	</footer>
 </body>
 <script src="../lib/three.min.js"></script>
 <script src="../js/sample-earth.js"></script>
