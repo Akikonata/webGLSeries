@@ -7,7 +7,7 @@
 	texture.wrapS = THREE.MirroredRepeatWrapping;
 	texture.wrapT = THREE.MirroredRepeatWrapping;
 	//加入漫反射和聚光灯
-	// var amLight = new THREE.AmbientLight(0x563abb);
+	// var amLight = new THREE.AmbientLight(0xFF0000);
 	// scene.add(amLight);
 	var light = new THREE.SpotLight(0xffffff, 1);
 	light.position.set(100, 200, 50);
