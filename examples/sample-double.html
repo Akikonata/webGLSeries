@@ -3,9 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<title>double-eye</title>
 </head>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	html,body{
+		height: 100%;
+	}
+	.scene{
+		position: relative;
+		float: left;
+		width: 50%;
+		height: 100%;
+		background:black;
+	}
+</style>
 <body>
-	
+	<div class='scene'></div>
+	<div class='scene'></div>
 </body>
+<script src="../lib/three.min.js"></script>
+<script src="../js/sample-earth.js"></script>
 </html>
