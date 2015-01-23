@@ -34,8 +34,8 @@
 	scene.add(sphere);
 	camera1.position.z = 25;
 	camera2.position.z = 25;
-	camera1.position.x = -1;
-	camera2.position.x = 1;
+	camera1.position.x = -2;
+	camera2.position.x = 2;
 	// scene.add(camera1);
 	// scene.add(camera2);2
 	var setRendererSize = function() {
