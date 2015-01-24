@@ -12,6 +12,7 @@
 	});
 	renderer.setClearColor(0x000000, 1);
 	renderer.autoClear = false;
+	renderer.setPixelRatio(window.devicePixelRatio);
 	document.body.appendChild(renderer.domElement);
 	var _w = document.body.clientWidth;
 	var _h = document.body.clientHeight;
@@ -36,8 +37,6 @@
 	camera2.position.z = 25;
 	camera1.position.x = -2;
 	camera2.position.x = 2;
-	// scene.add(camera1);
-	// scene.add(camera2);2
 	var setRendererSize = function() {
 		SCREEN_WIDTH = window.innerWidth;
 		SCREEN_HEIGHT = window.innerHeight;
@@ -49,6 +48,7 @@
 
 	function render() {
 		sphere.rotation.y += 0.01;
+		cube.rotation.y = angle;
 		cube.position.z = 15 * Math.sin(angle += 0.01);
 		cube.position.x = 15 * Math.cos(angle += 0.01);
 		renderer.clear();
