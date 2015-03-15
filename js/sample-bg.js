@@ -4,7 +4,7 @@
 	var renderer = new THREE.WebGLRenderer({
 		antialias: true
 	});
-	var camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 1, 10000);
+	var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 10000);
 	camera.position.y = 0;
 	camera.position.z = 10;
 	scene.add(camera);
@@ -18,7 +18,7 @@
 		map: groundTexture
 	});
 
-	var mesh = new THREE.Mesh(new THREE.PlaneBufferGeometry(12, 12 * window.innerHeight / window.innerWidth), groundMaterial);
+	var mesh = new THREE.Mesh(new THREE.PlaneBufferGeometry(24, 24 * window.innerHeight / window.innerWidth), groundMaterial);
 	scene.add(mesh);
 
 	renderer.setPixelRatio(window.devicePixelRatio);
