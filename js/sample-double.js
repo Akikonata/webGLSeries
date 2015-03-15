@@ -45,7 +45,6 @@
 	window.onresize = setRendererSize;
 	setRendererSize();
 	var angle = 0;
-
 	function render() {
 		sphere.rotation.y += 0.01;
 		cube.rotation.y = angle;

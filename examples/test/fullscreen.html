@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>full-screen-test</title>
+</head>
+<body>
+<video controls id="myvideo">
+  <source src="sintel.mp4"></source>
+</video>
+<!-- <div id='myvideo' style="width:300px;height:300px;background:black"></div> -->
+<div style="width:300px;height:300px;background:red"></div>
+</body>
+<script>
+	var elem = document.getElementById("myvideo");
+	elem.onclick = function(){
+		if (elem.requestFullscreen) {
+		  elem.requestFullscreen();
+		} else if (elem.mozRequestFullScreen) {
+		  elem.mozRequestFullScreen();
+		} else if (elem.webkitRequestFullscreen) {
+		  elem.webkitRequestFullscreen();
+		}
+	}
+</script>
+</html>

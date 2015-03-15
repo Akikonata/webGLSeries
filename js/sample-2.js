@@ -18,7 +18,7 @@
 	var geometry = new THREE.SphereGeometry(10, 32, 32);
 	//加载纹理
 	var texture = THREE.ImageUtils.loadTexture("texture.png");
-	// var material = new THREE.LineBasicMaterial({
+	//var material = new THREE.LineBasicMaterial({
 	// 	color: 0xffffff,
 	// 	map: texture
 	// });
@@ -26,21 +26,18 @@
 	// 	color: 0xffffff,
 	// 	map: texture
 	// });
-	// var material = new THREE.MeshPhongMaterial({
-	// 	color: 0xFFFFFF,
-	// 	map: texture
-	// });
-	var material = new THREE.MeshLambertMaterial({
+	var material = new THREE.MeshPhongMaterial({
 		color: 0xFFFFFF,
 		map: texture
 	});
-<<<<<<< HEAD
-=======
+	// var material = new THREE.MeshLambertMaterial({
+	// 	color: 0xFFFFFF,
+	// 	map: texture
+	// });
 	// var material = new THREE.LineBasicMaterial({
 	// 	color: 0xffff00,
 	// 	map: texture
 	// });
->>>>>>> dev
 	var pointLight = new THREE.PointLight(0xFFFFFF); // Set the color of the light source (white).
 	pointLight.position.set(0, 0, 0); // Position the light source at (x, y, z).
 	scene.add(pointLight); // Add the light sou6rce to the scene.
@@ -77,7 +74,7 @@
 	var Radius = 0;
 
 	function animate() {
-		sphere.rotation.x += 0.01;
+		sphere.rotation.y += 0.01;
 		// camera.position.x = 50 * Math.cos(Radius += Math.PI / 180);
 		// camera.position.z = 506 * Math.sin(Radius);
 		renderer.render(scene, camera);

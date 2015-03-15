@@ -2,7 +2,7 @@
 	//初始化场景
 	var scene = new THREE.Scene();
 	//视锥角度、视野纵横比、近平面，远平面
-	var camera = new THREE.PerspectiveCamera(90, 1, 10, 100);
+	var camera = new THREE.PerspectiveCamera(90, 1, 0.001, 100);
 	var renderer = new THREE.WebGLRenderer();
 	renderer.setSize(600, 600);
 	document.getElementById('stage').appendChild(renderer.domElement);
