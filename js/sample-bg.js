@@ -18,7 +18,7 @@
 		map: groundTexture
 	});
 
-	var mesh = new THREE.Mesh(new THREE.PlaneBufferGeometry(10, 10), groundMaterial);
+	var mesh = new THREE.Mesh(new THREE.PlaneBufferGeometry(12, 12 * window.innerHeight / window.innerWidth), groundMaterial);
 	scene.add(mesh);
 
 	renderer.setPixelRatio(window.devicePixelRatio);
