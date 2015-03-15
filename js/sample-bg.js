@@ -5,22 +5,20 @@
 		antialias: true
 	});
 	var camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 1, 10000);
-	camera.position.y = 50;
-	camera.position.z = 1500;
+	camera.position.y = 0;
+	camera.position.z = 10;
 	scene.add(camera);
 	var groundTexture = THREE.ImageUtils.loadTexture("grasslight-big.jpg");
-	groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
-	groundTexture.repeat.set(25, 25);
-	groundTexture.anisotropy = 16;
+	// groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
+	// groundTexture.repeat.set(25, 25);
+	// groundTexture.anisotropy = 16;
 
 	var groundMaterial = new THREE.MeshBasicMaterial({
 		color: 0xffffff,
-		specular: 0x111111,
 		map: groundTexture
 	});
 
-	var mesh = new THREE.Mesh(new THREE.PlaneBufferGeometry(20000, 20000), groundMaterial);
-	mesh.receiveShadow = true;
+	var mesh = new THREE.Mesh(new THREE.PlaneBufferGeometry(10, 10), groundMaterial);
 	scene.add(mesh);
 
 	renderer.setPixelRatio(window.devicePixelRatio);
