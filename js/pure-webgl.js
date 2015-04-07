@@ -32,7 +32,7 @@
 	var square = createSquare(gl);
 
 	var projectionMatrix, modelViewMatrix;
-
+	//利用库创建矩阵
 	function initMatrices(canvas) {
 		// Create a model view matrix with camera at 0, 0, −3.333
 		modelViewMatrix = mat4.create();
@@ -41,8 +41,42 @@
 		projectionMatrix = mat4.create();
 		mat4.perspective(projectionMatrix, Math.PI / 4,
 			canvas.width / canvas.height, 1, 10000);
+		console.log(modelViewMatrix, projectionMatrix);
 	}
 	initMatrices(canvas);
 
+	//用于将着色器字符串转换成真正可用的着色器
+	function createShader(gl, str, type) {
+			var shader;
+			if (type == "fragment") {
+				shader = gl.createShader(gl.FRAGMENT_SHADER);
+			} else if (type == "vertex") {
+				shader = gl.createShader(gl.VERTEX_SHADER);
+			} else {
+				return null;
+			}
+			gl.shaderSource(shader, str);
+			gl.compileShader(shader);
+			if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+				alert(gl.getShaderInfoLog(shader));
+				return null;
+			}
+			return shader;
+		}
+		//用GLSL语言编写的着色器代码
+	var vertexShaderSource =
+		"    attribute vec3 vertexPos;\n" +
+		"    uniform mat4 modelViewMatrix;\n" +
+		"    uniform mat4 projectionMatrix;\n" +
+		"    void main(void) {\n" +
+		//   Return the transformed and projected vertex value\n" +
+		"    gl_Position = projectionMatrix * modelViewMatrix * \n" +
+		"    vec4(vertexPos, 1.0);\n" +
+		"    }\n";
+	var fragmentShaderSource =
+		"    void main(void) {\n" +
+		"    // Return the pixel color: always output white\n" +
+		"    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);\n" +
+		"}\n";
 
 })();
