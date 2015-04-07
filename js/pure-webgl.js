@@ -1,4 +1,5 @@
 (function() {
+	var canvas = document.getElementById("canvas");
 	//获取绘图上下文
 	var initWebGL = function() {
 		var gl = canvas.getContext("experimental-webgl");
@@ -29,6 +30,19 @@
 		return square;
 	}
 	var square = createSquare(gl);
+
+	var projectionMatrix, modelViewMatrix;
+
+	function initMatrices(canvas) {
+		// Create a model view matrix with camera at 0, 0, −3.333
+		modelViewMatrix = mat4.create();
+		mat4.translate(modelViewMatrix, modelViewMatrix, [0, 0, -3.333]);
+		// Create a project matrix with 45 degree field of view
+		projectionMatrix = mat4.create();
+		mat4.perspective(projectionMatrix, Math.PI / 4,
+			canvas.width / canvas.height, 1, 10000);
+	}
+	initMatrices(canvas);
 
 
 })();
