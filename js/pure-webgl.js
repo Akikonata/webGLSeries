@@ -78,5 +78,5 @@
 		"    // Return the pixel color: always output white\n" +
 		"    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);\n" +
 		"}\n";
-
+		
 })();
