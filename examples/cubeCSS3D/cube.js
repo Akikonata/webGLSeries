@@ -9,444 +9,613 @@
 	var positionMap = [
 		//前
 		{
-			position:{
-				x:-200,y:-200,z:0
+			position: {
+				x: -200,
+				y: -200,
+				z: 0
 			},
-			rotation:{
-				x:0,y:0,z:0
+			rotation: {
+				x: 0,
+				y: 0,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:0,y:-200,z:0
+		}, {
+			position: {
+				x: 0,
+				y: -200,
+				z: 0
 			},
-			rotation:{
-				x:0,y:0,z:0
+			rotation: {
+				x: 0,
+				y: 0,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:200,y:-200,z:0
+		}, {
+			position: {
+				x: 200,
+				y: -200,
+				z: 0
 			},
-			rotation:{
-				x:0,y:0,z:0
+			rotation: {
+				x: 0,
+				y: 0,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:-200,y:0,z:0
+		}, {
+			position: {
+				x: -200,
+				y: 0,
+				z: 0
 			},
-			rotation:{
-				x:0,y:0,z:0
+			rotation: {
+				x: 0,
+				y: 0,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:0,y:0,z:0
+		}, {
+			position: {
+				x: 0,
+				y: 0,
+				z: 0
 			},
-			rotation:{
-				x:0,y:0,z:0
+			rotation: {
+				x: 0,
+				y: 0,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:200,y:0,z:0
+		}, {
+			position: {
+				x: 200,
+				y: 0,
+				z: 0
 			},
-			rotation:{
-				x:0,y:0,z:0
+			rotation: {
+				x: 0,
+				y: 0,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:-200,y:200,z:0
+		}, {
+			position: {
+				x: -200,
+				y: 200,
+				z: 0
 			},
-			rotation:{
-				x:0,y:0,z:0
+			rotation: {
+				x: 0,
+				y: 0,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:0,y:200,z:0
+		}, {
+			position: {
+				x: 0,
+				y: 200,
+				z: 0
 			},
-			rotation:{
-				x:0,y:0,z:0
+			rotation: {
+				x: 0,
+				y: 0,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:200,y:200,z:0
+		}, {
+			position: {
+				x: 200,
+				y: 200,
+				z: 0
 			},
-			rotation:{
-				x:0,y:0,z:0
+			rotation: {
+				x: 0,
+				y: 0,
+				z: 0
 			}
 		},
 		//后
 		{
-			position:{
-				x:-200,y:-200,z:-600
+			position: {
+				x: -200,
+				y: -200,
+				z: -600
 			},
-			rotation:{
-				x:0,y:0,z:0
+			rotation: {
+				x: 0,
+				y: 0,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:0,y:-200,z:-600
+		}, {
+			position: {
+				x: 0,
+				y: -200,
+				z: -600
 			},
-			rotation:{
-				x:0,y:0,z:0
+			rotation: {
+				x: 0,
+				y: 0,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:200,y:-200,z:-600
+		}, {
+			position: {
+				x: 200,
+				y: -200,
+				z: -600
 			},
-			rotation:{
-				x:0,y:0,z:0
+			rotation: {
+				x: 0,
+				y: 0,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:-200,y:0,z:-600
+		}, {
+			position: {
+				x: -200,
+				y: 0,
+				z: -600
 			},
-			rotation:{
-				x:0,y:0,z:0
+			rotation: {
+				x: 0,
+				y: 0,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:0,y:0,z:-600
+		}, {
+			position: {
+				x: 0,
+				y: 0,
+				z: -600
 			},
-			rotation:{
-				x:0,y:0,z:0
+			rotation: {
+				x: 0,
+				y: 0,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:200,y:0,z:-600
+		}, {
+			position: {
+				x: 200,
+				y: 0,
+				z: -600
 			},
-			rotation:{
-				x:0,y:0,z:0
+			rotation: {
+				x: 0,
+				y: 0,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:-200,y:200,z:-600
+		}, {
+			position: {
+				x: -200,
+				y: 200,
+				z: -600
 			},
-			rotation:{
-				x:0,y:0,z:0
+			rotation: {
+				x: 0,
+				y: 0,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:0,y:200,z:-600
+		}, {
+			position: {
+				x: 0,
+				y: 200,
+				z: -600
 			},
-			rotation:{
-				x:0,y:0,z:0
+			rotation: {
+				x: 0,
+				y: 0,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:200,y:200,z:-600
+		}, {
+			position: {
+				x: 200,
+				y: 200,
+				z: -600
 			},
-			rotation:{
-				x:0,y:0,z:0
+			rotation: {
+				x: 0,
+				y: 0,
+				z: 0
 			}
 		},
 		//左
 		{
-			position:{
-				x:-300,y:-200,z:-100
+			position: {
+				x: -300,
+				y: -200,
+				z: -100
 			},
-			rotation:{
-				x:0,y:Math.PI/2,z:0
+			rotation: {
+				x: 0,
+				y: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:-300,y:-200,z:-300
+		}, {
+			position: {
+				x: -300,
+				y: -200,
+				z: -300
 			},
-			rotation:{
-				x:0,y:Math.PI/2,z:0
+			rotation: {
+				x: 0,
+				y: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:-300,y:-200,z:-500
+		}, {
+			position: {
+				x: -300,
+				y: -200,
+				z: -500
 			},
-			rotation:{
-				x:0,y:Math.PI/2,z:0
+			rotation: {
+				x: 0,
+				y: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:-300,y:0,z:-100
+		}, {
+			position: {
+				x: -300,
+				y: 0,
+				z: -100
 			},
-			rotation:{
-				x:0,y:Math.PI/2,z:0
+			rotation: {
+				x: 0,
+				y: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:-300,y:-0,z:-300
+		}, {
+			position: {
+				x: -300,
+				y: -0,
+				z: -300
 			},
-			rotation:{
-				x:0,y:Math.PI/2,z:0
+			rotation: {
+				x: 0,
+				y: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:-300,y:0,z:-500
+		}, {
+			position: {
+				x: -300,
+				y: 0,
+				z: -500
 			},
-			rotation:{
-				x:0,y:Math.PI/2,z:0
+			rotation: {
+				x: 0,
+				y: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:-300,y:200,z:-100
+		}, {
+			position: {
+				x: -300,
+				y: 200,
+				z: -100
 			},
-			rotation:{
-				x:0,y:Math.PI/2,z:0
+			rotation: {
+				x: 0,
+				y: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:-300,y:200,z:-300
+		}, {
+			position: {
+				x: -300,
+				y: 200,
+				z: -300
 			},
-			rotation:{
-				x:0,y:Math.PI/2,z:0
+			rotation: {
+				x: 0,
+				y: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:-300,y:200,z:-500
+		}, {
+			position: {
+				x: -300,
+				y: 200,
+				z: -500
 			},
-			rotation:{
-				x:0,y:Math.PI/2,z:0
+			rotation: {
+				x: 0,
+				y: Math.PI / 2,
+				z: 0
 			}
 		},
 		//右
 		{
-			position:{
-				x:300,y:-200,z:-100
+			position: {
+				x: 300,
+				y: -200,
+				z: -100
 			},
-			rotation:{
-				x:0,y:Math.PI/2,z:0
+			rotation: {
+				x: 0,
+				y: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:300,y:-200,z:-300
+		}, {
+			position: {
+				x: 300,
+				y: -200,
+				z: -300
 			},
-			rotation:{
-				x:0,y:Math.PI/2,z:0
+			rotation: {
+				x: 0,
+				y: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:300,y:-200,z:-500
+		}, {
+			position: {
+				x: 300,
+				y: -200,
+				z: -500
 			},
-			rotation:{
-				x:0,y:Math.PI/2,z:0
+			rotation: {
+				x: 0,
+				y: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:300,y:0,z:-100
+		}, {
+			position: {
+				x: 300,
+				y: 0,
+				z: -100
 			},
-			rotation:{
-				x:0,y:Math.PI/2,z:0
+			rotation: {
+				x: 0,
+				y: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:300,y:-0,z:-300
+		}, {
+			position: {
+				x: 300,
+				y: -0,
+				z: -300
 			},
-			rotation:{
-				x:0,y:Math.PI/2,z:0
+			rotation: {
+				x: 0,
+				y: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:300,y:0,z:-500
+		}, {
+			position: {
+				x: 300,
+				y: 0,
+				z: -500
 			},
-			rotation:{
-				x:0,y:Math.PI/2,z:0
+			rotation: {
+				x: 0,
+				y: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:300,y:200,z:-100
+		}, {
+			position: {
+				x: 300,
+				y: 200,
+				z: -100
 			},
-			rotation:{
-				x:0,y:Math.PI/2,z:0
+			rotation: {
+				x: 0,
+				y: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:300,y:200,z:-300
+		}, {
+			position: {
+				x: 300,
+				y: 200,
+				z: -300
 			},
-			rotation:{
-				x:0,y:Math.PI/2,z:0
+			rotation: {
+				x: 0,
+				y: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:300,y:200,z:-500
+		}, {
+			position: {
+				x: 300,
+				y: 200,
+				z: -500
 			},
-			rotation:{
-				x:0,y:Math.PI/2,z:0
+			rotation: {
+				x: 0,
+				y: Math.PI / 2,
+				z: 0
 			}
 		},
 		//下
 		{
-			position:{
-				x:-200,y:-300,z:-100
+			position: {
+				x: -200,
+				y: -300,
+				z: -100
 			},
-			rotation:{
-				y:0,x:Math.PI/2,z:0
+			rotation: {
+				y: 0,
+				x: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:0,y:-300,z:-100
+		}, {
+			position: {
+				x: 0,
+				y: -300,
+				z: -100
 			},
-			rotation:{
-				y:0,x:Math.PI/2,z:0
+			rotation: {
+				y: 0,
+				x: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:200,y:-300,z:-100
+		}, {
+			position: {
+				x: 200,
+				y: -300,
+				z: -100
 			},
-			rotation:{
-				y:0,x:Math.PI/2,z:0
+			rotation: {
+				y: 0,
+				x: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:-200,y:-300,z:-300
+		}, {
+			position: {
+				x: -200,
+				y: -300,
+				z: -300
 			},
-			rotation:{
-				y:0,x:Math.PI/2,z:0
+			rotation: {
+				y: 0,
+				x: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:0,y:-300,z:-300
+		}, {
+			position: {
+				x: 0,
+				y: -300,
+				z: -300
 			},
-			rotation:{
-				y:0,x:Math.PI/2,z:0
+			rotation: {
+				y: 0,
+				x: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:200,y:-300,z:-300
+		}, {
+			position: {
+				x: 200,
+				y: -300,
+				z: -300
 			},
-			rotation:{
-				y:0,x:Math.PI/2,z:0
+			rotation: {
+				y: 0,
+				x: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:-200,y:-300,z:-500
+		}, {
+			position: {
+				x: -200,
+				y: -300,
+				z: -500
 			},
-			rotation:{
-				y:0,x:Math.PI/2,z:0
+			rotation: {
+				y: 0,
+				x: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:0,y:-300,z:-500
+		}, {
+			position: {
+				x: 0,
+				y: -300,
+				z: -500
 			},
-			rotation:{
-				y:0,x:Math.PI/2,z:0
+			rotation: {
+				y: 0,
+				x: Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:200,y:-300,z:-500
+		}, {
+			position: {
+				x: 200,
+				y: -300,
+				z: -500
 			},
-			rotation:{
-				y:0,x:Math.PI/2,z:0
+			rotation: {
+				y: 0,
+				x: Math.PI / 2,
+				z: 0
 			}
 		},
 		//上
 		{
-			position:{
-				x:-200,y:300,z:-100
+			position: {
+				x: -200,
+				y: 300,
+				z: -100
 			},
-			rotation:{
-				y:0,x:-Math.PI/2,z:0
+			rotation: {
+				y: 0,
+				x: -Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:0,y:300,z:-100
+		}, {
+			position: {
+				x: 0,
+				y: 300,
+				z: -100
 			},
-			rotation:{
-				y:0,x:-Math.PI/2,z:0
+			rotation: {
+				y: 0,
+				x: -Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:200,y:300,z:-100
+		}, {
+			position: {
+				x: 200,
+				y: 300,
+				z: -100
 			},
-			rotation:{
-				y:0,x:-Math.PI/2,z:0
+			rotation: {
+				y: 0,
+				x: -Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:-200,y:300,z:-300
+		}, {
+			position: {
+				x: -200,
+				y: 300,
+				z: -300
 			},
-			rotation:{
-				y:0,x:-Math.PI/2,z:0
+			rotation: {
+				y: 0,
+				x: -Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:0,y:300,z:-300
+		}, {
+			position: {
+				x: 0,
+				y: 300,
+				z: -300
 			},
-			rotation:{
-				y:0,x:-Math.PI/2,z:0
+			rotation: {
+				y: 0,
+				x: -Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:200,y:300,z:-300
+		}, {
+			position: {
+				x: 200,
+				y: 300,
+				z: -300
 			},
-			rotation:{
-				y:0,x:-Math.PI/2,z:0
+			rotation: {
+				y: 0,
+				x: -Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:-200,y:300,z:-500
+		}, {
+			position: {
+				x: -200,
+				y: 300,
+				z: -500
 			},
-			rotation:{
-				y:0,x:-Math.PI/2,z:0
+			rotation: {
+				y: 0,
+				x: -Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:0,y:300,z:-500
+		}, {
+			position: {
+				x: 0,
+				y: 300,
+				z: -500
 			},
-			rotation:{
-				y:0,x:-Math.PI/2,z:0
+			rotation: {
+				y: 0,
+				x: -Math.PI / 2,
+				z: 0
 			}
-		},
-		{
-			position:{
-				x:200,y:300,z:-500
+		}, {
+			position: {
+				x: 200,
+				y: 300,
+				z: -500
 			},
-			rotation:{
-				y:0,x:-Math.PI/2,z:0
+			rotation: {
+				y: 0,
+				x: -Math.PI / 2,
+				z: 0
 			}
 		}
 	];
-	function copyPositionInfo(obj,data){
+
+	function copyPositionInfo(obj, data) {
 		obj.position.x = data.position.x;
 		obj.position.y = data.position.y;
 		obj.position.z = data.position.z;
@@ -454,6 +623,7 @@
 		obj.rotation.y = data.rotation.y;
 		obj.rotation.z = data.rotation.z;
 	};
+
 	function init() {
 		camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 10000);
 		camera.position.z = 3000;
@@ -462,12 +632,13 @@
 		for (var i = 0; i < 54; i++) {
 			var element = document.createElement('div');
 			element.className = 'block';
-			element.id = "block"+i;
-			element.onclick = function(){
-				alert(this.id+" clicked!");
+			element.id = "block" + i;
+			element.innerHTML = 'block' + i;
+			element.onclick = function() {
+				alert(this.id + " clicked!");
 			};
 			var object = new THREE.CSS3DObject(element);
-			copyPositionInfo(object,positionMap[i]);
+			copyPositionInfo(object, positionMap[i]);
 			scene.add(object);
 			faces.push(object);
 			renderer = new THREE.CSS3DRenderer();
@@ -480,7 +651,7 @@
 			controls.maxDistance = 6000;
 			controls.addEventListener('change', render);
 		}
-		window.addEventListener( 'resize', onWindowResize, false );
+		window.addEventListener('resize', onWindowResize, false);
 	};
 
 	function animate() {
@@ -490,7 +661,6 @@
 		TWEEN.update();
 
 		controls.update();
-
 	}
 
 	function onWindowResize() {
@@ -504,5 +674,6 @@
 
 	}
 	init();
+	render();
 	animate();
 })();
