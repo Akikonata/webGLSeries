@@ -1,0 +1,51 @@
+<!--不依赖任何第三方库的 WebGL 绘制一个点-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#canvas {
+			width: 800px;
+			height: 600px;
+		}
+	</style>
+</head>
+<body>
+	<canvas width="800" height="600" id="canvas"></canvas>
+</body>
+<script>
+	(function () {
+		let VSHADER_SOURCE = `
+			void main() {
+				gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
+				gl_PointSize = 10.0;
+			}	
+		`;
+		let FSHADER_SOURCE = `
+			void main () {
+				gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+			}
+		`;
+		let gl = document.getElementById('canvas').getContext('webgl');
+
+		let vShader = gl.createShader(gl.VERTEX_SHADER);
+		gl.shaderSource(vShader, VSHADER_SOURCE);
+		gl.compileShader(vShader);
+
+		let fShader = gl.createShader(gl.FRAGMENT_SHADER);
+		gl.shaderSource(fShader, FSHADER_SOURCE);
+		gl.compileShader(fShader);
+
+		let shaderProgram = gl.createProgram();
+		gl.attachShader(shaderProgram, vShader);
+		gl.attachShader(shaderProgram, fShader);
+		gl.linkProgram(shaderProgram);
+		gl.useProgram(shaderProgram);
+
+		gl.clearColor(0.0, 0.0, 0.0, 1.0);
+		gl.clear(gl.COLOR_BUFFER_BIT);
+		gl.drawArrays(gl.POINTS, 0, 1);
+	})();
+</script>
+</html>
